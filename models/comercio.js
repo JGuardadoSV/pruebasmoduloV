@@ -12,4 +12,10 @@ ComercioSchema.statics.Constructor=function(nombre,direccion){
         direccion:direccion
     })
 }
+
+ComercioSchema.statics.todos = async function(cb){
+    return await this.find({},cb);
+}
+
+
 module.exports= mongoose.model('Comercio',ComercioSchema)

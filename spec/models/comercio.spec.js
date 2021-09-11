@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var comercio = require('../../models/comercio.js')
+var Comercio = require('../../models/comercio.js')
 
 describe('Test modelo Comercio',function(){
 
@@ -13,7 +13,7 @@ describe('Test modelo Comercio',function(){
             done();
         });
     })
-
+/** 
     describe('Crear instancia',()=>{
       
         it('crear una instancia de comercio',()=>{
@@ -21,5 +21,16 @@ describe('Test modelo Comercio',function(){
             expect(comerciotest.nombre).toBe("Comercio 1")
             expect(comerciotest.direccion).toBe("Chalatenango")
         })
+    })*/
+
+    describe('Comprobar si coleccion inicia vacía', () => {
+        it('comienza vacía', (done) => {
+            Comercio.todos(function(err, comercios){
+                expect(comercios.length).toBe(0);
+                done()
+            })
+        })
     })
+    
+
 })
