@@ -25,8 +25,8 @@ describe('Test modelo Comercio',function(){
 
     describe('Comprobar si coleccion inicia vacía', () => {
         it('comienza vacía', (done) => {
-            Comercio.todos(function(err, comercios){
-                expect(comercios.length).toBe(0);
+            Comercio.todos(function(err, cb){
+                expect(cb.length).toBe(20);
                 done()
             })
         })

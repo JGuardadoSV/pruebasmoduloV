@@ -13,8 +13,8 @@ ComercioSchema.statics.Constructor=function(nombre,direccion){
     })
 }
 
-ComercioSchema.statics.todos = async function(cb){
-    return await this.find({},cb);
+ComercioSchema.statics.todos = function(cb){
+    return this.find({},cb);
 }
 
 
