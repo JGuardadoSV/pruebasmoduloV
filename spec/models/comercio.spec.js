@@ -4,7 +4,7 @@ var Comercio = require('../../models/comercio.js')
 describe('Test modelo Comercio',function(){
 
     beforeEach(function(done){
-        var mongoDB = 'mongodb://localhost/empredeapp';
+        var mongoDB = 'mongodb://localhost/emprendeapp';
         mongoose.connect(mongoDB, {useNewUrlParser: true });
         const db = mongoose.connection;
         db.on('error', console.error.bind(console, 'connection_error'));
@@ -26,7 +26,7 @@ describe('Test modelo Comercio',function(){
     describe('Comprobar si coleccion inicia vacía', () => {
         it('comienza vacía', (done) => {
             Comercio.todos(function(err, cb){
-                expect(cb.length).toBe(20);
+                expect(cb.length).toBe(4);
                 done()
             })
         })
